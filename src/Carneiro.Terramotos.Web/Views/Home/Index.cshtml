@@ -1,0 +1,50 @@
+﻿@model HomeIndexViewModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+<div id="map"></div>
+
+<div class="container mt-3">
+    <div class="card-deck">
+        @foreach (var item in Model.Items)
+        {
+            <partial name="_EarthQuakeListItem" model="item" />
+        }
+    </div>
+</div>
+
+@section Scripts{
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCqYMPCnbO3CnNWQGW576bWmKe64cy-Rw&callback=initMap" async defer></script>
+    <script type="text/javascript">
+        var map;
+
+        var locations = @Html.Raw(Json.Serialize(Model.Maps));
+
+        var coords = {
+            latitude: 39.737345865025894,
+            longitude: -6.946105018750017
+        };
+
+        function initMap() {
+
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: { lat: coords.latitude, lng: coords.longitude },
+                zoom: 6,
+                disableDefaultUI: true
+            });
+
+            for (var i = 0; i < locations.length; i++) {
+                var marker = new google.maps.Marker({
+                    draggable: false,
+                    animation: google.maps.Animation.DROP,
+                    position: {
+                        lat: locations[i].latitude, lng: locations[i].longitude
+                    },
+                    title: locations[i].description,
+                    map: map
+                });
+            }
+
+        }
+    </script>
+}

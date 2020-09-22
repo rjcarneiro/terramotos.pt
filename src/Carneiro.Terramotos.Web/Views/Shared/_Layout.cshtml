@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] | terramotos.pt</title>
+    <link rel="stylesheet" href="~/css/vendor-@(ViewData[WebConstants.Theme]).min.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <nav class="navbar fixed-top navbar-expand-md">
+            <div class="container">
+
+                <a class="navbar-brand" asp-controller="Home" asp-action="Index">
+                    <img src="~/images/logo.png" alt="Terramotos" title="Terramotos" />
+                </a>
+
+                <button class="navbar-toggler second-button" type="button" data-toggle="collapse" data-target="#navbarSupportedContent23"
+                        aria-controls="navbarSupportedContent23" aria-expanded="false" aria-label="Toggle navigation">
+                    <div class="animated-icon2"><span></span><span></span><span></span><span></span></div>
+                </button>
+
+                <div class="navbar-collapse collapse d-md-inline-flex" id="navbarSupportedContent23">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main role="main">
+        @RenderBody()
+    </main>
+    <script src="~/js/vendor.min.js" asp-append-version="true"></script>
+    <script src="~/js/site.min.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

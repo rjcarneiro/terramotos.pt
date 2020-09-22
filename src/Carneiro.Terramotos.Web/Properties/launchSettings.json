@@ -1,0 +1,12 @@
+﻿{
+  "profiles": {
+    "Carneiro.Terramotos.Web": {
+      "commandName": "Project",
+      "launchBrowser": false,
+      "applicationUrl": "https://localhost:44392;http://localhost:44391",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}

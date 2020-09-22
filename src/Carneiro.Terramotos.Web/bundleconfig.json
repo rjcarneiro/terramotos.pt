@@ -1,0 +1,61 @@
+[
+  {
+    "outputFileName": "wwwroot/css/site.min.css",
+    "inputFiles": [
+      "wwwroot/css/site.css",
+      "wwwroot/css/hamburger.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/css/vendor-light.min.css",
+    "inputFiles": [
+      "wwwroot/css/vendor-light.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/css/vendor-dark.min.css",
+    "inputFiles": [
+      "wwwroot/css/vendor-dark.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/css/icons.min.css",
+    "inputFiles": [
+      "wwwroot/css/icons.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/site.min.js",
+    "inputFiles": [
+      "wwwroot/js/site.js"
+    ],
+    "minify": {
+      "enabled": true,
+      "renameLocals": true
+    },
+    "sourceMap": false
+  },
+  {
+    "outputFileName": "wwwroot/js/vendor.min.js",
+    "inputFiles": [
+      "node_modules/jquery/dist/jquery.js",
+      "node_modules/bootstrap/dist/js/bootstrap.bundle.js"
+    ],
+    "minify": {
+      "enabled": true,
+      "renameLocals": true
+    },
+    "sourceMap": false
+  },
+  {
+    "outputFileName": "wwwroot/js/icons.min.js",
+    "inputFiles": [
+      "node_modules/@fortawesome/fontawesome-free/js/all.js"
+    ],
+    "minify": {
+      "enabled": true,
+      "renameLocals": true
+    },
+    "sourceMap": false
+  }
+]

@@ -1,0 +1,173 @@
+﻿@import "_variables.scss";
+// Colours
+$component-active-color: $white;
+$component-active-bg: $orange;
+/*$link-color: $cart-lighter;*/
+$link-hover-color: darken($orange, 15%);
+$body-bg: $gray-900;
+$body-color: $gray-100;
+/*$table-dark-bg: $cart;*/
+/*$card-cap-bg: $cart-light;*/
+$card-cap-color: $gray-100;
+// kbd
+$kbd-color: $black;
+$kbd-bg: $orange;
+$kbd-box-shadow: inset 0 -.1rem 0 rgba($danger, .25);
+// Toast
+$toast-background-color: rgba($white, 1);
+// Cards
+$card-bg: $gray-800;
+//Jumbo
+$jumbotron-bg: $gray-700;
+// Lists
+$list-group-bg: $gray-700;
+$list-group-color: $gray-200;
+$list-group-hover-bg: $gray-800;
+// Pagination
+$pagination-color: $link-color;
+$pagination-bg: $gray-800;
+$pagination-border-color: $gray-700;
+$pagination-hover-color: $link-hover-color;
+$pagination-hover-bg: $gray-900;
+$pagination-hover-border-color: $gray-600;
+$pagination-disabled-color: $gray-600;
+$pagination-disabled-bg: $gray-700;
+$pagination-disabled-border-color: $gray-600;
+// Modal
+$modal-content-bg: $gray-900;
+$modal-content-border-color: rgba($black, .2) !default;
+// Close
+$close-color: $gray-100;
+$close-text-shadow: 0 1px 0 $gray-600;
+
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+.navbar {
+    background: $body-bg;
+}
+
+.nav-item {
+    transition: background .2s, color .2s;
+    color: $gray-100;
+}
+
+.nav-item.active {
+    background-color: $gray-600;
+    border-color: transparent $orange darken($orange, 15%) $orange;
+}
+
+.nav-item.active a.nav-link {
+    color: $gray-100;
+}
+
+.nav-left-menu > .nav-item.active {
+    color: $gray-100;
+    border-left: 3px solid $orange;
+}
+
+.card-product-wrapper {
+    background: $gray-700;
+    color: $gray-200;
+}
+
+.card-product-wrapper:hover {
+    border: 1px solid $orange;
+}
+
+.form-control:focus {
+    /*border-color: $cart-lighter;*/
+}
+
+.animated-icon2 span {
+    /*background: $cart-lighter;*/
+}
+
+hr {
+    border-top: 1px solid rgba(255, 255, 255, 0.5) !important;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 0.2rem rgba(253, 126, 20, 0.25);
+    border-color: $orange;
+}
+
+/*.page-link {
+    background-color: $gray-800;
+    border: $gray-900;
+}
+
+.page-link:hover {
+    background-color: $gray-600;
+}
+
+.page-item.disabled .page-link {
+    color: $gray-300;
+    background-color: $gray-600;
+    border: $gray-900;
+}*/
+
+footer {
+    /*box-shadow: 0 0 0 0.2rem $cart;
+    background: $cart-lighter;*/
+}
+
+footer p {
+    color: $gray-100;
+}
+
+footer a {
+    color: $orange;
+}
+
+footer a:hover {
+    color: dark($orange, 15%);
+}
+
+.container > .chart-container {
+    background: $gray-800;
+}
+
+.card-theme:hover {
+    border: 1px solid dark($orange, 15%);
+}
+
+.table {
+    color: $gray-100;
+}
+
+.table tbody tr:nth-of-type(odd) {
+    background-color: $gray-800;
+}
+
+.table tbody tr:nth-of-type(even) {
+    background-color: $gray-900;
+}
+
+.table-hover tbody tr:hover {
+    color: $gray-200;
+    background-color: $black;
+}
+
+.border {
+    border: 1px solid $gray-800 !important;
+}
+
+#qrCode {
+    background: $white;
+}
+
+.card-product-action-disabled {
+    color: $gray-700 !important;
+}
+
+.card-product-action-disabled .fa-star:hover {
+    color: $gray-800 !important;
+}
+
+.home-price-changes {
+    background: $gray-800;
+}
+
+.lds-ellipsis div {
+    background: $gray-700;
+}

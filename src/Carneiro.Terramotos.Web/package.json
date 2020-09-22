@@ -1,0 +1,26 @@
+{
+  "name": "terramotos-web",
+  "version": "1.0.0",
+  "private": true,
+  "devDependencies": {
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-sass": "^4.1.0",
+    "gulp-uglify": "^3.0.2",
+    "merge-stream": "^2.0.0",
+    "clean-css": "^4.2.3"
+  },
+  "dependencies": {
+    "bootstrap": "^4.5.2",
+    "jquery": "^3.5.1",
+    "vscode-codicons": "^0.0.10",
+    "@fortawesome/fontawesome-free": "^5.14.0",
+    "flag-icon-css": "^3.5.0",
+    "angular": "^1.8.0",
+    "moment": "^2.28.0",
+    "chart.js": "^2.9.3"
+  }
+}
