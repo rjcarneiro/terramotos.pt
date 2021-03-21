@@ -1,4 +1,4 @@
-name: .NET Core
+name: .NET
 
 on:
   push:
@@ -13,11 +13,19 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Setup .NET Core
+    - name: Setup NodeJs
+      uses: actions/setup-node@v2
+      with:
+        node-version: ${{ matrix.node }}
+    - name: Install NodeJs dependencies
+      run: cd ./src/Carneiro.Terramotos.Web ; npm install
+    - name: Run Gulp tasks
+      run: cd ./src/Carneiro.Terramotos.Web ; node ./node_modules/gulp/bin/gulp.js default
+    - name: Setup .NET
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: 3.1.301
-    - name: Install dependencies
-      run: dotnet restore
+        dotnet-version: 5.0.x
+    - name: Restore dependencies
+      run: dotnet restore ./src/Carneiro.Terramotos.sln
     - name: Build
-      run: dotnet build --configuration Release
+      run: dotnet build --no-restore ./src/Carneiro.Terramotos.sln

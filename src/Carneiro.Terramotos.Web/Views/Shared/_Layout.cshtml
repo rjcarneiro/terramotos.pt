@@ -9,8 +9,8 @@
 </head>
 <body>
     <header>
-        <nav class="navbar fixed-top navbar-expand-md">
-            <div class="container">
+        <nav class="navbar fixed-top navbar-expand-md mb-3">
+            <div class="container-xl container-fluid">
 
                 <a class="navbar-brand" asp-controller="Home" asp-action="Index">
                     <img src="~/images/logo.png" alt="Terramotos" title="Terramotos" />
@@ -31,7 +31,7 @@
             </div>
         </nav>
     </header>
-    <main role="main">
+    <main role="main" class="container-xl container-fluid">
         @RenderBody()
     </main>
     <script src="~/js/vendor.min.js" asp-append-version="true"></script>
