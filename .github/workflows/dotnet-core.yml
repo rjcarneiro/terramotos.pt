@@ -20,12 +20,12 @@ jobs:
     - name: Install NodeJs dependencies
       run: cd ./src/Carneiro.Terramotos.Web ; npm install
     - name: Run Gulp tasks
-      run: node ./node_modules/gulp/bin/gulp.js default
+      run: cd ./src/Carneiro.Terramotos.Web ; node ./node_modules/gulp/bin/gulp.js default
     - name: Setup .NET
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 5.0.x
     - name: Restore dependencies
-      run: cd .. ; cd .. ; dotnet restore ./src/Carneiro.Terramotos.sln
+      run: dotnet restore ./src/Carneiro.Terramotos.sln
     - name: Build
       run: dotnet build --no-restore ./src/Carneiro.Terramotos.sln
