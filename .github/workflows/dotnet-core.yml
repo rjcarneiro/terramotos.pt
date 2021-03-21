@@ -19,5 +19,9 @@ jobs:
         dotnet-version: 5.0.x
     - name: Restore dependencies
       run: dotnet restore ./src/Carneiro.Terramotos.sln
+    - name: Install Dependencies
+      run: cd ./src/Carneiro.Terramotos.Web
+      run: npm Install
+      run: cd .. ; cd .. ;
     - name: Build
       run: dotnet build --no-restore ./src/Carneiro.Terramotos.sln
