@@ -27,7 +27,7 @@ jobs:
       with:
         node-version: ${{ matrix.node }}
     - run: cd ./src/Carneiro.Terramotos.Web
-    - run: npm Install
+    - run: npm install
     - run: cd .. ; cd .. ;
     - name: Build
       run: dotnet build --no-restore ./src/Carneiro.Terramotos.sln
